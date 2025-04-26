@@ -6,8 +6,7 @@ Each lab demonstrates key digital design concepts using VHDL, including simulati
 ## Structure
 
 - **Labs 1-4**:  
-  VHDL source files (`.vhd`) along with testbenches where needed.  
-  These can be compiled and simulated in any VHDL-supported environment (such as Vivado, ModelSim, etc.).
+  VHDL source files (`.txt`) along with testbenches where needed.
 
 - **Labs 5 and onward**:  
   Full project folders created using **Xilinx ISE**.  
