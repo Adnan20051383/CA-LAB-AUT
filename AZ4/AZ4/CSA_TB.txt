@@ -1,0 +1,46 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity CarrySelectAdder_tb is
+end CarrySelectAdder_tb;
+
+architecture test of CarrySelectAdder_tb is
+    component CarrySelectAdder
+        Port ( A     : in  STD_LOGIC_VECTOR(3 downto 0);
+               B     : in  STD_LOGIC_VECTOR(3 downto 0);
+               Cin   : in  STD_LOGIC;
+               Sum   : out STD_LOGIC_VECTOR(3 downto 0);
+               Cout  : out STD_LOGIC);
+    end component;
+
+    signal A, B, Sum : STD_LOGIC_VECTOR(3 downto 0);
+    signal Cin, Cout : STD_LOGIC;
+
+begin
+    UUT: CarrySelectAdder port map (A, B, Cin, Sum, Cout);
+
+    process
+    begin
+        -- Test Case 1: 0000 + 0000
+        A <= "0000"; B <= "0000"; Cin <= '0';
+        wait for 10 ns;
+
+        -- Test Case 2: 0001 + 0001
+        A <= "0001"; B <= "0001"; Cin <= '0';
+        wait for 10 ns;
+
+        -- Test Case 3: 0101 + 0011
+        A <= "0101"; B <= "0011"; Cin <= '0';
+        wait for 10 ns;
+
+        -- Test Case 4: 1111 + 0001
+        A <= "1111"; B <= "0001"; Cin <= '0';
+        wait for 10 ns;
+
+        -- Test Case 5: 1001 + 0110
+        A <= "1001"; B <= "0110"; Cin <= '0';
+        wait for 10 ns;
+
+        wait;
+    end process;
+end test;

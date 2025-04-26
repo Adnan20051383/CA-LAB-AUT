@@ -1,0 +1,42 @@
+`timescale 1ns / 1ps
+
+module tb_four_bit_comparator;
+    reg [3:0] A;
+    reg [3:0] B;
+    wire GT, EQ, LT;
+
+    four_bit_comparator uut (
+        .A(A),
+        .B(B),
+        .GT(GT),
+        .EQ(EQ),
+        .LT(LT)
+    );
+
+    initial begin
+        // Test Case 1: A = 0000, B = 0000 (Expect EQ = 1, GT = 0, LT = 0)
+        A = 4'b0000; B = 4'b0000; #10;
+
+        // Test Case 2: A = 0001, B = 0000 (Expect GT = 1, EQ = 0, LT = 0)
+        A = 4'b0001; B = 4'b0000; #10;
+
+        // Test Case 3: A = 0000, B = 0001 (Expect LT = 1, EQ = 0, GT = 0)
+        A = 4'b0000; B = 4'b0001; #10;
+
+        // Test Case 4: A = 1010, B = 0101 (Expect GT = 1, EQ = 0, LT = 0)
+        A = 4'b1010; B = 4'b0101; #10;
+
+        // Test Case 5: A = 0101, B = 1010 (Expect LT = 1, EQ = 0, GT = 0)
+        A = 4'b0101; B = 4'b1010; #10;
+
+        // Test Case 6: A = 1111, B = 1111 (Expect EQ = 1, GT = 0, LT = 0)
+        A = 4'b1111; B = 4'b1111; #10;
+
+        // Test Case 7: A = 0111, B = 1000 (Expect LT = 1, EQ = 0, GT = 0)
+        A = 4'b0111; B = 4'b1000; #10;
+
+        // Finish the simulation
+        $stop;
+    end
+
+endmodule

@@ -1,0 +1,10 @@
+Command line:
+   tb_ram_dual_port_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57145
+
+Wed Apr  9 08:33:16 2025
+
+
+ Elaboration Time: 0.02 sec

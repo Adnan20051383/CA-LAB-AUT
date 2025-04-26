@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\ISE\pr8\restoring_divider.ncd
+OUTFILE=C:\ISE\pr8\restoring_divider.bit
+FAMILY=Spartan3
+PART=xc3s400-5pq208
+WORKINGDIR=C:\ISE\pr8
+LICENSE=WebPack
+USER_INFO=__0_0_0

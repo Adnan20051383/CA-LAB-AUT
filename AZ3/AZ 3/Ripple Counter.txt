@@ -1,0 +1,47 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity ripple_counter_tff is
+    Port (
+        clk     : in  STD_LOGIC;            
+        reset_n : in  STD_LOGIC;                  
+        q       : out STD_LOGIC_VECTOR(3 downto 0) 
+    );
+end ripple_counter_tff;
+
+architecture Behavioral of ripple_counter_tff is
+    signal tff_q : STD_LOGIC_VECTOR(3 downto 0);
+begin
+    tff0: entity work.t_ff_async_reset
+        port map (
+            clk     => clk,
+            reset_n => reset_n,
+            t       => '1',        
+            q       => tff_q(0)
+        );
+
+    tff1: entity work.t_ff_async_reset
+        port map (
+            clk     => tff_q(0),    
+            reset_n => reset_n,
+            t       => '1',       
+            q       => tff_q(1)
+        );
+
+    tff2: entity work.t_ff_async_reset
+        port map (
+            clk     => tff_q(1),   
+            reset_n => reset_n,
+            t       => '1',       
+            q       => tff_q(2)
+        );
+
+    tff3: entity work.t_ff_async_reset
+        port map (
+            clk     => tff_q(2),  
+            reset_n => reset_n,
+            t       => '1',    
+            q       => tff_q(3)
+        );
+    q <= tff_q;
+end Behavioral;

@@ -1,0 +1,2 @@
+vhdl work "Booth.vhd"
+vhdl work "Booth_TB.vhd"

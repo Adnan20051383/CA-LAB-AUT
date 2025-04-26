@@ -1,0 +1,10 @@
+AR shift_register_top behavioral /home/ise/ISE_Share/AZ6_ROSE_ADNAN/top_module.vhd sub00/vhpl09 1741762381
+EN multiplex_7segment NULL /home/ise/ISE_Share/AZ6_ROSE_ADNAN/multiplex_7seg.vhd sub00/vhpl06 1741762378
+EN shift_register_top NULL /home/ise/ISE_Share/AZ6_ROSE_ADNAN/top_module.vhd sub00/vhpl08 1741762380
+AR clock_divider behavioral /home/ise/ISE_Share/AZ6_ROSE_ADNAN/clock_divider.vhd sub00/vhpl01 1741762373
+EN clock_divider_100hz NULL /home/ise/ISE_Share/AZ6_ROSE_ADNAN/clock_divider_100Hz.vhd sub00/vhpl02 1741762374
+AR shift_register behavioral /home/ise/ISE_Share/AZ6_ROSE_ADNAN/shift_register.vhd sub00/vhpl05 1741762377
+EN clock_divider NULL /home/ise/ISE_Share/AZ6_ROSE_ADNAN/clock_divider.vhd sub00/vhpl00 1741762372
+AR clock_divider_100hz behavioral /home/ise/ISE_Share/AZ6_ROSE_ADNAN/clock_divider_100Hz.vhd sub00/vhpl03 1741762375
+AR multiplex_7segment behavioral /home/ise/ISE_Share/AZ6_ROSE_ADNAN/multiplex_7seg.vhd sub00/vhpl07 1741762379
+EN shift_register NULL /home/ise/ISE_Share/AZ6_ROSE_ADNAN/shift_register.vhd sub00/vhpl04 1741762376

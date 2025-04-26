@@ -1,0 +1,561 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: Shift_Register_Top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Shift_Register_Top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Shift_Register_Top"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-pq208
+
+---- Source Options
+Top Module Name                    : Shift_Register_Top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/clock_divider.vhd" in Library work.
+Entity <clock_divider> compiled.
+Entity <clock_divider> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/clock_divider_100Hz.vhd" in Library work.
+Architecture behavioral of Entity clock_divider_100hz is up to date.
+Compiling vhdl file "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/shift_register.vhd" in Library work.
+Architecture behavioral of Entity shift_register is up to date.
+Compiling vhdl file "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/multiplex_7seg.vhd" in Library work.
+Architecture behavioral of Entity multiplex_7segment is up to date.
+Compiling vhdl file "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/top_module.vhd" in Library work.
+Architecture behavioral of Entity shift_register_top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Shift_Register_Top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Clock_Divider> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Clock_Divider_100Hz> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Shift_Register> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <multiplex_7segment> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Shift_Register_Top> in library <work> (Architecture <behavioral>).
+Entity <Shift_Register_Top> analyzed. Unit <Shift_Register_Top> generated.
+
+Analyzing Entity <Clock_Divider> in library <work> (Architecture <Behavioral>).
+Entity <Clock_Divider> analyzed. Unit <Clock_Divider> generated.
+
+Analyzing Entity <Clock_Divider_100Hz> in library <work> (Architecture <Behavioral>).
+Entity <Clock_Divider_100Hz> analyzed. Unit <Clock_Divider_100Hz> generated.
+
+Analyzing Entity <Shift_Register> in library <work> (Architecture <Behavioral>).
+INFO:Xst:1561 - "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/shift_register.vhd" line 34: Mux is complete : default of case is discarded
+Entity <Shift_Register> analyzed. Unit <Shift_Register> generated.
+
+Analyzing Entity <multiplex_7segment> in library <work> (Architecture <Behavioral>).
+INFO:Xst:1561 - "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/multiplex_7seg.vhd" line 61: Mux is complete : default of case is discarded
+Entity <multiplex_7segment> analyzed. Unit <multiplex_7segment> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Clock_Divider>.
+    Related source file is "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/clock_divider.vhd".
+    Found 1-bit register for signal <slow_clk>.
+    Found 32-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <Clock_Divider> synthesized.
+
+
+Synthesizing Unit <Clock_Divider_100Hz>.
+    Related source file is "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/clock_divider_100Hz.vhd".
+    Found 1-bit register for signal <slow_clk>.
+    Found 32-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <Clock_Divider_100Hz> synthesized.
+
+
+Synthesizing Unit <Shift_Register>.
+    Related source file is "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/shift_register.vhd".
+    Found 4-bit register for signal <reg>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Shift_Register> synthesized.
+
+
+Synthesizing Unit <multiplex_7segment>.
+    Related source file is "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/multiplex_7seg.vhd".
+    Found 4x5-bit ROM for signal <sel_seg$mux0001> created at line 31.
+    Found 8-bit register for signal <seg_data>.
+    Found 5-bit register for signal <sel_seg>.
+    Found 8-bit 4-to-1 multiplexer for signal <seg_data$mux0002> created at line 31.
+    Found 2-bit up counter for signal <select_en>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <multiplex_7segment> synthesized.
+
+
+Synthesizing Unit <Shift_Register_Top>.
+    Related source file is "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/top_module.vhd".
+Unit <Shift_Register_Top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x5-bit ROM                                           : 1
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 5
+ 1-bit register                                        : 2
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 1
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x5-bit ROM                                           : 1
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+# Multiplexers                                         : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <sel_seg_4> (without init value) has a constant value of 0 in block <multiplex_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <seg_data_6> (without init value) has a constant value of 0 in block <multiplex_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <seg_data_7> (without init value) has a constant value of 0 in block <multiplex_7segment>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <seg_data_1> in Unit <multiplex_7segment> is equivalent to the following FF/Latch, which will be removed : <seg_data_2> 
+
+Optimizing unit <Shift_Register_Top> ...
+
+Optimizing unit <Shift_Register> ...
+
+Optimizing unit <multiplex_7segment> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Shift_Register_Top, actual ratio is 2.
+INFO:Xst:2260 - The FF/Latch <Multiplex_7Segment_Inst/seg_data_5> in Unit <Shift_Register_Top> is equivalent to the following 3 FFs/Latches : <Multiplex_7Segment_Inst/seg_data_4> <Multiplex_7Segment_Inst/seg_data_3> <Multiplex_7Segment_Inst/seg_data_0> 
+FlipFlop Multiplex_7Segment_Inst/seg_data_1 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 82
+ Flip-Flops                                            : 82
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Shift_Register_Top.ngr
+Top Level Output File Name         : Shift_Register_Top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 26
+
+Cell Usage :
+# BELS                             : 310
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 62
+#      LUT2                        : 71
+#      LUT3                        : 3
+#      LUT4                        : 22
+#      MUXCY                       : 78
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 82
+#      FDC                         : 80
+#      FDCE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 25
+#      IBUF                        : 8
+#      OBUF                        : 17
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-5 
+
+ Number of Slices:                       88  out of   3584     2%  
+ Number of Slice Flip Flops:             80  out of   7168     1%  
+ Number of 4 input LUTs:                163  out of   7168     2%  
+ Number of IOs:                          26
+ Number of bonded IOBs:                  26  out of    141    18%  
+    IOB Flip Flops:                       2
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                    | Load  |
+-----------------------------------+------------------------------------------+-------+
+clk                                | BUFGP                                    | 66    |
+Clock_Divider_1Hz_Inst/slow_clk    | NONE(Shift_Register_Inst/reg_3)          | 4     |
+Clock_Divider_100Hz_Inst/slow_clk  | NONE(Multiplex_7Segment_Inst/select_en_1)| 12    |
+-----------------------------------+------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 82    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.482ns (Maximum Frequency: 154.278MHz)
+   Minimum input arrival time before clock: 3.774ns
+   Maximum output required time after clock: 6.318ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.482ns (frequency: 154.278MHz)
+  Total number of paths / destination ports: 3170 / 68
+-------------------------------------------------------------------------
+Delay:               6.482ns (Levels of Logic = 33)
+  Source:            Clock_Divider_100Hz_Inst/counter_1 (FF)
+  Destination:       Clock_Divider_100Hz_Inst/counter_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Clock_Divider_100Hz_Inst/counter_1 to Clock_Divider_100Hz_Inst/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.626   1.040  Clock_Divider_100Hz_Inst/counter_1 (Clock_Divider_100Hz_Inst/counter_1)
+     LUT1:I0->O            1   0.479   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<1>_rt (Clock_Divider_100Hz_Inst/Mcount_counter_cy<1>_rt)
+     MUXCY:S->O            1   0.435   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<1> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<2> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<3> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<4> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<5> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<6> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<7> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<8> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<9> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<10> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<10>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<11> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<11>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<12> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<12>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<13> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<13>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<14> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<14>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<15> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<15>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<16> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<16>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<17> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<17>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<18> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<18>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<19> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<19>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<20> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<20>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<21> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<21>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<22> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<22>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<23> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<23>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<24> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<24>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<25> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<25>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<26> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<26>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<27> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<27>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<28> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<28>)
+     MUXCY:CI->O           1   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<29> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<29>)
+     MUXCY:CI->O           0   0.056   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_cy<30> (Clock_Divider_100Hz_Inst/Mcount_counter_cy<30>)
+     XORCY:CI->O           1   0.786   0.851  Clock_Divider_100Hz_Inst/Mcount_counter_xor<31> (Result<31>1)
+     LUT2:I1->O            1   0.479   0.000  Clock_Divider_100Hz_Inst/Mcount_counter_eqn_311 (Clock_Divider_100Hz_Inst/Mcount_counter_eqn_31)
+     FDC:D                     0.176          Clock_Divider_100Hz_Inst/counter_31
+    ----------------------------------------
+    Total                      6.482ns (4.591ns logic, 1.891ns route)
+                                       (70.8% logic, 29.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock_Divider_1Hz_Inst/slow_clk'
+  Clock period: 3.564ns (frequency: 280.607MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               3.564ns (Levels of Logic = 2)
+  Source:            Shift_Register_Inst/reg_2 (FF)
+  Destination:       Shift_Register_Inst/reg_2 (FF)
+  Source Clock:      Clock_Divider_1Hz_Inst/slow_clk rising
+  Destination Clock: Clock_Divider_1Hz_Inst/slow_clk rising
+
+  Data Path: Shift_Register_Inst/reg_2 to Shift_Register_Inst/reg_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.626   0.953  Shift_Register_Inst/reg_2 (Shift_Register_Inst/reg_2)
+     LUT4:I1->O            1   0.479   0.851  Shift_Register_Inst/reg_mux0002<2>16 (Shift_Register_Inst/reg_mux0002<2>16)
+     LUT4:I1->O            1   0.479   0.000  Shift_Register_Inst/reg_mux0002<2>39 (Shift_Register_Inst/reg_mux0002<2>)
+     FDC:D                     0.176          Shift_Register_Inst/reg_2
+    ----------------------------------------
+    Total                      3.564ns (1.760ns logic, 1.804ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock_Divider_100Hz_Inst/slow_clk'
+  Clock period: 2.882ns (frequency: 346.933MHz)
+  Total number of paths / destination ports: 23 / 10
+-------------------------------------------------------------------------
+Delay:               2.882ns (Levels of Logic = 1)
+  Source:            Multiplex_7Segment_Inst/select_en_0 (FF)
+  Destination:       Multiplex_7Segment_Inst/select_en_0 (FF)
+  Source Clock:      Clock_Divider_100Hz_Inst/slow_clk rising
+  Destination Clock: Clock_Divider_100Hz_Inst/slow_clk rising
+
+  Data Path: Multiplex_7Segment_Inst/select_en_0 to Multiplex_7Segment_Inst/select_en_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              8   0.626   0.921  Multiplex_7Segment_Inst/select_en_0 (Multiplex_7Segment_Inst/select_en_0)
+     INV:I->O              1   0.479   0.681  Multiplex_7Segment_Inst/Mcount_select_en_xor<0>11_INV_0 (Multiplex_7Segment_Inst/Result<0>)
+     FDC:D                     0.176          Multiplex_7Segment_Inst/select_en_0
+    ----------------------------------------
+    Total                      2.882ns (1.281ns logic, 1.601ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock_Divider_1Hz_Inst/slow_clk'
+  Total number of paths / destination ports: 20 / 4
+-------------------------------------------------------------------------
+Offset:              3.774ns (Levels of Logic = 3)
+  Source:            lr<1> (PAD)
+  Destination:       Shift_Register_Inst/reg_2 (FF)
+  Destination Clock: Clock_Divider_1Hz_Inst/slow_clk rising
+
+  Data Path: lr<1> to Shift_Register_Inst/reg_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.715   1.074  lr_1_IBUF (lr_1_IBUF)
+     LUT4:I0->O            1   0.479   0.851  Shift_Register_Inst/reg_mux0002<2>16 (Shift_Register_Inst/reg_mux0002<2>16)
+     LUT4:I1->O            1   0.479   0.000  Shift_Register_Inst/reg_mux0002<2>39 (Shift_Register_Inst/reg_mux0002<2>)
+     FDC:D                     0.176          Shift_Register_Inst/reg_2
+    ----------------------------------------
+    Total                      3.774ns (1.849ns logic, 1.925ns route)
+                                       (49.0% logic, 51.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock_Divider_1Hz_Inst/slow_clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              6.318ns (Levels of Logic = 1)
+  Source:            Shift_Register_Inst/reg_2 (FF)
+  Destination:       q<2> (PAD)
+  Source Clock:      Clock_Divider_1Hz_Inst/slow_clk rising
+
+  Data Path: Shift_Register_Inst/reg_2 to q<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.626   0.783  Shift_Register_Inst/reg_2 (Shift_Register_Inst/reg_2)
+     OBUF:I->O                 4.909          q_2_OBUF (q<2>)
+    ----------------------------------------
+    Total                      6.318ns (5.535ns logic, 0.783ns route)
+                                       (87.6% logic, 12.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock_Divider_100Hz_Inst/slow_clk'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            Multiplex_7Segment_Inst/seg_data_5 (FF)
+  Destination:       seg_data<5> (PAD)
+  Source Clock:      Clock_Divider_100Hz_Inst/slow_clk rising
+
+  Data Path: Multiplex_7Segment_Inst/seg_data_5 to seg_data<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.626   0.681  Multiplex_7Segment_Inst/seg_data_5 (Multiplex_7Segment_Inst/seg_data_5)
+     OBUF:I->O                 4.909          seg_data_5_OBUF (seg_data<5>)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 1.81 secs
+ 
+--> 
+
+
+Total memory usage is 611640 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

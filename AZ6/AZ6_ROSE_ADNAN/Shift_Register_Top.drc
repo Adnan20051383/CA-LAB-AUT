@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Mar 12 06:53:12 2025
+
+drc -z Shift_Register_Top.ncd Shift_Register_Top.pcf
+
+DRC detected 0 errors and 0 warnings.

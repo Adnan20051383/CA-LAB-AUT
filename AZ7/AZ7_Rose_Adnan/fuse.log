@@ -1,0 +1,23 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/ISE_Share/4033106466/AZ7_Rose_Adnan/tb_ram_dual_port_isim_beh.exe -prj /home/ise/ISE_Share/4033106466/AZ7_Rose_Adnan/tb_ram_dual_port_beh.prj work.tb_ram_dual_port 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/ISE_Share/4033106466/AZ7_Rose_Adnan/DualPortRAM.vhd" into library work
+Parsing VHDL file "/home/ise/ISE_Share/4033106466/AZ7_Rose_Adnan/DualPortRAM_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 97260 KB
+Fuse CPU Usage: 940 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package math_real
+Compiling architecture behavioral of entity ram_dual_port [\ram_dual_port(8,4)\]
+Compiling architecture behavior of entity tb_ram_dual_port
+Time Resolution for simulation is 1ps.
+Compiled 7 VHDL Units
+Built simulation executable /home/ise/ISE_Share/4033106466/AZ7_Rose_Adnan/tb_ram_dual_port_isim_beh.exe
+Fuse Memory Usage: 114072 KB
+Fuse CPU Usage: 1000 ms
+GCC CPU Usage: 110 ms

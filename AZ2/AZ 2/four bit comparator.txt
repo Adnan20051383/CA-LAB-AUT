@@ -1,0 +1,21 @@
+module four_bit_comparator (
+    input [3:0] A,
+    input [3:0] B,
+    output GT,
+    output EQ,
+    output LT
+);
+    wire [3:0] gt_signals;
+    wire [3:0] eq_signals;
+    wire [3:0] lt_signals;
+
+    one_bit_comparator COMP0 (.A(A[0]), .B(B[0]), .LT_in(1'b0), .GT_in(1'b0), .A_GT_B(gt_signals[0]), .A_EQ_B(eq_signals[0]), .A_LT_B(lt_signals[0]));
+    one_bit_comparator COMP1 (.A(A[1]), .B(B[1]), .LT_in(lt_signals[0]), .GT_in(gt_signals[0]), .A_GT_B(gt_signals[1]), .A_EQ_B(eq_signals[1]), .A_LT_B(lt_signals[1]));
+    one_bit_comparator COMP2 (.A(A[2]), .B(B[2]), .LT_in(lt_signals[1]), .GT_in(gt_signals[1]), .A_GT_B(gt_signals[2]), .A_EQ_B(eq_signals[2]), .A_LT_B(lt_signals[2]));
+    one_bit_comparator COMP3 (.A(A[3]), .B(B[3]), .LT_in(lt_signals[2]), .GT_in(gt_signals[2]), .A_GT_B(gt_signals[3]), .A_EQ_B(eq_signals[3]), .A_LT_B(lt_signals[3]));
+
+    assign GT = gt_signals[3];
+    assign LT = lt_signals[3];
+    assign EQ = eq_signals[3];
+
+endmodule

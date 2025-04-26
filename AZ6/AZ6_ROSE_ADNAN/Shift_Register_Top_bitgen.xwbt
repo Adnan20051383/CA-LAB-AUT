@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.ncd
+OUTFILE=/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.bit
+FAMILY=Spartan3
+PART=xc3s400-5pq208
+WORKINGDIR=/home/ise/ISE_Share/AZ6_ROSE_ADNAN
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

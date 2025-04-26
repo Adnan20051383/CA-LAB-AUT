@@ -1,0 +1,31 @@
+Command line:
+   booth_multiplier_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  41897
+
+Wed Mar  5 08:54:36 2025
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 198.726 Meg
+
+ Total Signals          : 11
+ Total Nets             : 37
+ Total Signal Drivers   : 10
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 6
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 415
+In process Booth.vhd:21 
+ Target Size 5 and source size 6 for array dimension 0 does not match. 
+
+
+ Total Simulation Time: 0.02 sec
+
+ Current Memory Usage: 276.324 Meg
+
+Wed Mar  5 08:55:02 2025
+

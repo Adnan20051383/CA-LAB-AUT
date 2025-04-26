@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/ISE_Share/4033106466/AZ7_Rose_Adnan/tb_ram_dual_port_isim_beh.exe" -prj "/home/ise/ISE_Share/4033106466/AZ7_Rose_Adnan/tb_ram_dual_port_beh.prj" "work.tb_ram_dual_port" 

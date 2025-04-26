@@ -1,0 +1,25 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "sel_seg[4]" LOC = P16;
+NET "sel_seg[3]" LOC = P18;
+NET "sel_seg[2]" LOC = P19;
+NET "sel_seg[1]" LOC = P20;
+NET "sel_seg[0]" LOC = P15;
+NET "seg_data[7]" LOC = P3;
+NET "seg_data[6]" LOC = P9;
+NET "seg_data[5]" LOC = P12;
+NET "seg_data[4]" LOC = P4;
+NET "seg_data[3]" LOC = P5;
+NET "seg_data[2]" LOC = P11;
+NET "seg_data[1]" LOC = P7;
+NET "seg_data[0]" LOC = P10;
+NET "clk" LOC = P184;
+NET "load" LOC = P183;
+NET "reset" LOC = P182;
+NET "parallel_in[3]" LOC = P161;
+NET "parallel_in[2]" LOC = P162;
+NET "parallel_in[1]" LOC = P165;
+NET "parallel_in[0]" LOC = P166;
+NET "lr[1]" LOC = P172;
+NET "lr[0]" LOC = P175;

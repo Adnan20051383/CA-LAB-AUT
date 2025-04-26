@@ -1,0 +1,73 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity tb_sequence_detector_mealy is
+    -- Testbench has no ports
+end tb_sequence_detector_mealy;
+
+architecture Behavioral of tb_sequence_detector_mealy is
+    -- Component declaration for the sequence detector
+    component sequence_detector_mealy
+        Port (
+            clk     : in  STD_LOGIC;
+            reset_n : in  STD_LOGIC;
+            din     : in  STD_LOGIC;
+            detected : out STD_LOGIC
+        );
+    end component;
+
+    -- Testbench signals
+    signal clk     : STD_LOGIC := '0';
+    signal reset_n : STD_LOGIC := '1';
+    signal din     : STD_LOGIC := '0';
+    signal detected : STD_LOGIC;
+
+    -- Clock period constant
+    constant clk_period : time := 10 ns;
+
+begin
+    -- Instantiate the sequence detector
+    uut: sequence_detector_mealy
+        Port map (
+            clk     => clk,
+            reset_n => reset_n,
+            din     => din,
+            detected => detected
+        );
+
+    -- Clock generation process
+    clk_process: process
+    begin
+        clk <= '0';
+        wait for clk_period / 2;
+        clk <= '1';
+        wait for clk_period / 2;
+    end process;
+
+    -- Stimulus process
+    stimulus_process: process
+    begin
+        -- Apply reset
+        reset_n <= '0';
+        wait for 20 ns;
+        reset_n <= '1';
+        wait for 20 ns;
+
+        -- Test sequence: "1101"
+        din <= '1'; wait for clk_period;
+        din <= '1'; wait for clk_period;
+        din <= '0'; wait for clk_period;
+        din <= '1'; wait for clk_period;  -- "1101" detected, output should be '1'
+
+        -- Test another sequence
+        din <= '0'; wait for clk_period;
+        din <= '1'; wait for clk_period;
+        din <= '1'; wait for clk_period;
+        din <= '0'; wait for clk_period;
+        din <= '1'; wait for clk_period;  -- Another "1101" detected
+
+        -- End of simulation
+        wait;
+    end process;
+
+end Behavioral;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="NetListWriters" num="298" delta="new" >No output is written to <arg fmt="%s" index="1">Shift_Register_Top.xncf</arg>, ignored.
+</msg>
+
+<msg type="warning" file="NetListWriters" num="306" delta="new" >Signal bus <arg fmt="%s" index="1">Multiplex_7Segment_Inst/seg_data</arg><arg fmt="%s" index="2">&lt;5 : 0&gt;</arg> on block <arg fmt="%s" index="3">Shift_Register_Top</arg> is not reconstructed, because there are some missing bus signals.
+</msg>
+
+</messages>
+

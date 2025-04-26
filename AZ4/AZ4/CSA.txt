@@ -1,0 +1,41 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity CarrySelectAdder is
+    Port ( A     : in  STD_LOGIC_VECTOR(3 downto 0);
+           B     : in  STD_LOGIC_VECTOR(3 downto 0);
+           Cin   : in  STD_LOGIC;
+           Sum   : out STD_LOGIC_VECTOR(3 downto 0);
+           Cout  : out STD_LOGIC);
+end CarrySelectAdder;
+
+architecture Structural of CarrySelectAdder is
+    component RippleCarryAdder
+        Port ( A  : in  STD_LOGIC_VECTOR(3 downto 0);
+               B  : in  STD_LOGIC_VECTOR(3 downto 0);
+               Cin  : in  STD_LOGIC;
+               Sum  : out  STD_LOGIC_VECTOR(3 downto 0);
+               Cout : out  STD_LOGIC);
+    end component;
+
+    component Mux2to1
+        Port ( D0  : in  STD_LOGIC;
+               D1  : in  STD_LOGIC;
+               Sel : in  STD_LOGIC;
+               Out : out STD_LOGIC);
+    end component;
+
+    signal Sum0, Sum1 : STD_LOGIC_VECTOR(3 downto 0);
+    signal Cout0, Cout1 : STD_LOGIC;
+
+begin
+    RCA0: RippleCarryAdder port map (A, B, '0', Sum0, Cout0);
+    RCA1: RippleCarryAdder port map (A, B, '1', Sum1, Cout1);
+
+    MUX_Cout: Mux2to1 port map (Cout0, Cout1, Cin, Cout);
+    MUX_Sum0: Mux2to1 port map (Sum0(0), Sum1(0), Cin, Sum(0));
+    MUX_Sum1: Mux2to1 port map (Sum0(1), Sum1(1), Cin, Sum(1));
+    MUX_Sum2: Mux2to1 port map (Sum0(2), Sum1(2), Cin, Sum(2));
+    MUX_Sum3: Mux2to1 port map (Sum0(3), Sum1(3), Cin, Sum(3));
+
+end Structural;

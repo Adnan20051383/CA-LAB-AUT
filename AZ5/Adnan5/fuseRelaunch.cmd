@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/ISE_Share/Adnan5/tb_booth_multiplier_isim_beh.exe" -prj "/home/ise/ISE_Share/Adnan5/tb_booth_multiplier_beh.prj" "tb_booth_multiplier" 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/ISE/pr8/tb_restoring_divider_isim_beh.exe" -prj "C:/ISE/pr8/tb_restoring_divider_beh.prj" "work.tb_restoring_divider" 

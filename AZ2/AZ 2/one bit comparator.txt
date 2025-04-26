@@ -1,0 +1,26 @@
+module one_bit_comparator (
+    input A,
+    input B,
+    input LT_in,
+    input GT_in,
+    output A_GT_B,
+    output A_EQ_B,
+    output A_LT_B
+);
+    wire not_a, not_b;
+    wire eq_check;
+    wire lt_internal, gt_internal;
+
+    assign not_a = ~A;
+    assign not_b = ~B;
+
+    assign eq_check = ~(A ^ B);
+
+    assign lt_internal = not_a & B;
+    assign gt_internal = A & not_b;
+
+    assign A_LT_B = (eq_check & LT_in) | (~eq_check & lt_internal);
+    assign A_GT_B = (eq_check & GT_in) | (~eq_check & gt_internal);
+    assign A_EQ_B = ~(A_LT_B | A_GT_B);
+
+endmodule

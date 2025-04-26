@@ -1,0 +1,30 @@
+xst -intstyle ise -ifn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.xst" -ofn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.xst" -ofn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.xst" -ofn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-5 Shift_Register_Top.ngc Shift_Register_Top.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Shift_Register_Top_map.ncd Shift_Register_Top.ngd Shift_Register_Top.pcf 
+par -w -intstyle ise -ol high -t 1 Shift_Register_Top_map.ncd Shift_Register_Top.ncd Shift_Register_Top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Shift_Register_Top.twx Shift_Register_Top.ncd -o Shift_Register_Top.twr Shift_Register_Top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Shift_Register_Top.ucf -p xc3s400-pq208-5 Shift_Register_Top.ngc Shift_Register_Top.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Shift_Register_Top_map.ncd Shift_Register_Top.ngd Shift_Register_Top.pcf 
+par -w -intstyle ise -ol high -t 1 Shift_Register_Top_map.ncd Shift_Register_Top.ncd Shift_Register_Top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Shift_Register_Top.twx Shift_Register_Top.ncd -o Shift_Register_Top.twr Shift_Register_Top.pcf -ucf Shift_Register_Top.ucf 
+bitgen -intstyle ise -f Shift_Register_Top.ut Shift_Register_Top.ncd 
+xst -intstyle ise -ifn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.xst" -ofn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Shift_Register_Top.ucf -p xc3s400-pq208-5 Shift_Register_Top.ngc Shift_Register_Top.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Shift_Register_Top_map.ncd Shift_Register_Top.ngd Shift_Register_Top.pcf 
+par -w -intstyle ise -ol high -t 1 Shift_Register_Top_map.ncd Shift_Register_Top.ncd Shift_Register_Top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Shift_Register_Top.twx Shift_Register_Top.ncd -o Shift_Register_Top.twr Shift_Register_Top.pcf -ucf Shift_Register_Top.ucf 
+bitgen -intstyle ise -f Shift_Register_Top.ut Shift_Register_Top.ncd 
+xst -intstyle ise -ifn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.xst" -ofn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Shift_Register_Top.ucf -p xc3s400-pq208-5 Shift_Register_Top.ngc Shift_Register_Top.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Shift_Register_Top_map.ncd Shift_Register_Top.ngd Shift_Register_Top.pcf 
+par -w -intstyle ise -ol high -t 1 Shift_Register_Top_map.ncd Shift_Register_Top.ncd Shift_Register_Top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Shift_Register_Top.twx Shift_Register_Top.ncd -o Shift_Register_Top.twr Shift_Register_Top.pcf -ucf Shift_Register_Top.ucf 
+bitgen -intstyle ise -f Shift_Register_Top.ut Shift_Register_Top.ncd 
+xst -intstyle ise -ifn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.xst" -ofn "/home/ise/ISE_Share/AZ6_ROSE_ADNAN/Shift_Register_Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Shift_Register_Top.ucf -p xc3s400-pq208-5 Shift_Register_Top.ngc Shift_Register_Top.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Shift_Register_Top_map.ncd Shift_Register_Top.ngd Shift_Register_Top.pcf 
+par -w -intstyle ise -ol high -t 1 Shift_Register_Top_map.ncd Shift_Register_Top.ncd Shift_Register_Top.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Shift_Register_Top.twx Shift_Register_Top.ncd -o Shift_Register_Top.twr Shift_Register_Top.pcf -ucf Shift_Register_Top.ucf 
+bitgen -intstyle ise -f Shift_Register_Top.ut Shift_Register_Top.ncd 

@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "/home/ise/ISE_Share/Adnan5/Multiplier_4bit.xst" -ofn "/home/ise/ISE_Share/Adnan5/Multiplier_4bit.syr" 
+xst -intstyle ise -ifn "/home/ise/ISE_Share/Adnan5/Multiplier_4bit.xst" -ofn "/home/ise/ISE_Share/Adnan5/Multiplier_4bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-5 Multiplier_4bit.ngc Multiplier_4bit.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Multiplier_4bit_map.ncd Multiplier_4bit.ngd Multiplier_4bit.pcf 
+par -w -intstyle ise -ol high -t 1 Multiplier_4bit_map.ncd Multiplier_4bit.ncd Multiplier_4bit.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Multiplier_4bit.twx Multiplier_4bit.ncd -o Multiplier_4bit.twr Multiplier_4bit.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE_Share/Adnan5/Multiplier_4bit.xst" -ofn "/home/ise/ISE_Share/Adnan5/Multiplier_4bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-5 Multiplier_4bit.ngc Multiplier_4bit.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Multiplier_4bit_map.ncd Multiplier_4bit.ngd Multiplier_4bit.pcf 
+par -w -intstyle ise -ol high -t 1 Multiplier_4bit_map.ncd Multiplier_4bit.ncd Multiplier_4bit.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Multiplier_4bit.twx Multiplier_4bit.ncd -o Multiplier_4bit.twr Multiplier_4bit.pcf 
+xst -intstyle ise -ifn "/home/ise/ISE_Share/Adnan5/Multiplier_4bit.xst" -ofn "/home/ise/ISE_Share/Adnan5/Multiplier_4bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-5 Multiplier_4bit.ngc Multiplier_4bit.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Multiplier_4bit_map.ncd Multiplier_4bit.ngd Multiplier_4bit.pcf 
+par -w -intstyle ise -ol high -t 1 Multiplier_4bit_map.ncd Multiplier_4bit.ncd Multiplier_4bit.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Multiplier_4bit.twx Multiplier_4bit.ncd -o Multiplier_4bit.twr Multiplier_4bit.pcf 

@@ -1,0 +1,6 @@
+EN half_adder NULL /home/ise/ISE_Share/Adnan5/HalfAdder.vhd sub00/vhpl00 1741161559
+EN multiplier_4bit NULL /home/ise/ISE_Share/Adnan5/TraditionalMultiplier.vhd sub00/vhpl04 1741161563
+AR multiplier_4bit behavioral /home/ise/ISE_Share/Adnan5/TraditionalMultiplier.vhd sub00/vhpl05 1741161564
+EN full_adder NULL /home/ise/ISE_Share/Adnan5/FullAdder.vhd sub00/vhpl02 1741161561
+AR full_adder behavioral /home/ise/ISE_Share/Adnan5/FullAdder.vhd sub00/vhpl03 1741161562
+AR half_adder behavioral /home/ise/ISE_Share/Adnan5/HalfAdder.vhd sub00/vhpl01 1741161560
