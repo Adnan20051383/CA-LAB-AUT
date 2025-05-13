@@ -1,0 +1,26 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/Shift_Register_Top_isim_beh.exe -prj C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/Shift_Register_Top_beh.prj work.Shift_Register_Top 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/shift_register.vhd" into library work
+Parsing VHDL file "C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/multiplex_7seg.vhd" into library work
+Parsing VHDL file "C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/clock_divider_100Hz.vhd" into library work
+Parsing VHDL file "C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/clock_divider.vhd" into library work
+Parsing VHDL file "C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/top_module.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity Clock_Divider [clock_divider_default]
+Compiling architecture behavioral of entity Clock_Divider_100Hz [clock_divider_100hz_default]
+Compiling architecture behavioral of entity Shift_Register [shift_register_default]
+Compiling architecture behavioral of entity multiplex_7segment [multiplex_7segment_default]
+Compiling architecture behavioral of entity shift_register_top
+Time Resolution for simulation is 1ps.
+Compiled 13 VHDL Units
+Built simulation executable C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/Shift_Register_Top_isim_beh.exe
+Fuse Memory Usage: 35712 KB
+Fuse CPU Usage: 343 ms

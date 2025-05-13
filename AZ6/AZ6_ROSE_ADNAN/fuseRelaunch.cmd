@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/Shift_Register_Top_isim_beh.exe" -prj "C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/Shift_Register_Top_beh.prj" "work.Shift_Register_Top" 

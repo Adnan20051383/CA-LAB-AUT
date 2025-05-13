@@ -1,0 +1,4 @@
+vhdl work "RAM.vhd"
+vhdl work "CPU.vhd"
+vhdl work "basic_comp.vhd"
+vhdl work "basic_comp_tb.vhd"

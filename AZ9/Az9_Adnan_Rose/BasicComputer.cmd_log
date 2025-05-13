@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.xst" -ofn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.syr" 
+xst -intstyle ise -ifn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.xst" -ofn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.syr" 
+xst -intstyle ise -ifn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.xst" -ofn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.syr" 
+xst -intstyle ise -ifn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.xst" -ofn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.syr" 
+xst -intstyle ise -ifn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.xst" -ofn "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/BasicComputer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd1800a-cs484-5 "BasicComputer.ngc" BasicComputer.ngd  
+map -intstyle ise -p xc3sd1800a-cs484-5 -cm area -ir off -pr off -c 100 -o BasicComputer_map.ncd BasicComputer.ngd BasicComputer.pcf 
+par -w -intstyle ise -ol high -t 1 BasicComputer_map.ncd BasicComputer.ncd BasicComputer.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml BasicComputer.twx BasicComputer.ncd -o BasicComputer.twr BasicComputer.pcf 

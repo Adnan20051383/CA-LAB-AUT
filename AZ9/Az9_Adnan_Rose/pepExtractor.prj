@@ -1,0 +1,3 @@
+work	"CPU.vhd"
+work	"RAM.vhd"
+work	"basic_comp.vhd"

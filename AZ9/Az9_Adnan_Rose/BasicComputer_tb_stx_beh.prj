@@ -1,0 +1,4 @@
+vhdl isim_temp "RAM.vhd"
+vhdl isim_temp "CPU.vhd"
+vhdl isim_temp "basic_comp.vhd"
+vhdl isim_temp "basic_comp_tb.vhd"

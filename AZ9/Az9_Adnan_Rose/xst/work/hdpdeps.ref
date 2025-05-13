@@ -1,0 +1,21 @@
+V3 11
+FL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/basic_comp.vhd" 2025/05/13.20:01:54 P.20131013
+EN work/BasicComputer 1747153919 \
+      FL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/basic_comp.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/BasicComputer/Struct 1747153920 \
+      FL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/basic_comp.vhd" \
+      EN work/BasicComputer 1747153919 CP work/CPU8BIT2 CP work/RAM16x8
+FL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/CPU.vhd" 2025/05/13.20:01:41 P.20131013
+EN work/CPU8BIT2 1747153915 \
+      FL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/CPU.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/CPU8BIT2/CPU_ARCH 1747153916 \
+      FL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/CPU.vhd" \
+      EN work/CPU8BIT2 1747153915
+FL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/RAM.vhd" 2025/05/13.19:53:16 P.20131013
+EN work/RAM16x8 1747153917 \
+      FL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/RAM.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/RAM16x8/Behavioral 1747153918 \
+      FL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/RAM.vhd" EN work/RAM16x8 1747153917

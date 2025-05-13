@@ -1,0 +1,5 @@
+vhdl work "shift_register.vhd"
+vhdl work "multiplex_7seg.vhd"
+vhdl work "clock_divider_100Hz.vhd"
+vhdl work "clock_divider.vhd"
+vhdl work "top_module.vhd"

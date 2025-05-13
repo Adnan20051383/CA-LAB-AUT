@@ -8,7 +8,19 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/ise/ISE_Share/AZ6_ROSE_ADNAN/clock_divider.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/clock_divider.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/clock_divider_100Hz.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/multiplex_7seg.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/shift_register.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Agc/Desktop/CA-LAB-AUT/AZ6/AZ6_ROSE_ADNAN/top_module.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

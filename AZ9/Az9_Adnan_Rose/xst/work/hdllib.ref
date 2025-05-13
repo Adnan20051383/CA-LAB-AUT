@@ -1,0 +1,6 @@
+AR cpu8bit2 cpu_arch "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/CPU.vhd" sub00/vhpl01 1747153916
+EN basiccomputer NULL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/basic_comp.vhd" sub00/vhpl04 1747153919
+AR ram16x8 behavioral "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/RAM.vhd" sub00/vhpl03 1747153918
+EN cpu8bit2 NULL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/CPU.vhd" sub00/vhpl00 1747153915
+AR basiccomputer struct "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/basic_comp.vhd" sub00/vhpl05 1747153920
+EN ram16x8 NULL "C:/Users/Agc/Desktop/New folder/Az9_Adnan_Rose/RAM.vhd" sub00/vhpl02 1747153917
